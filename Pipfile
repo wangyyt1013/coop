@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flake8 = "==3.8.3"
+flask = "==1.1.2"
+jinja2 = "==2.11.2"
+pymysql = "==0.10.0"
+pypika = "==0.38.0"
+pre-commit = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+flask = "flask run"
+test = "python -m unittest discover -v"
