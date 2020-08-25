@@ -1,68 +1,41 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Initial Setup Guide
+
+1. Clone this repo.
+2. If you have not done so, locally install yarn, node, and python 3.7. (Recommended: using Homebrew)
+3. Go to the root directory of the project, and set up the local virtual environment by the following commands: `pipenv --python 3.7 && pipenv install`.
+4. Install node dependencies with yarn: `yarn install --frozen-lockfile`.
+5. Within the root directory, create an `.env` file with the following configurations for our flask application:
+   ```
+   export FLASK_APP='api/app.py'
+   export FLASK_ENV='development'
+   ```
+
 ## Available Scripts
 
-In the project directory, you can run:
+1. To start the app, run:
 
-### `yarn start`
+   ```
+   $ yarn start-frontend
+   $ yarn start-backend
+   ```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   in two separate tabs. These commands runs the React app and the flask server
+   in development mode, and will reload when you make new changes to the code.
+   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+2. To conduct frontend and backend tests, run:
 
-### `yarn test`
+   ```
+   $ yarn test-frontend
+   $ yarn test-backend
+   ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   These commands will respectively run the frontend and backend tests in
+   `src/tests` and `api/tests`.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+3. After a `git commit` is attempted, the pre-commit hooks specified in
+   `.pre-commit-config.yaml` will scan the proposed changes for reformatting
+   & detecting stylistic / syntactical errors. Make sure you address those
+   warnings / errors before pushing.
