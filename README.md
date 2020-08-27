@@ -4,8 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Clone this repo.
 2. If you have not done so, locally install yarn, node, and python 3.7. (Recommended: using Homebrew)
-3. Go to the root directory of the project, and set up the local virtual environment by the following commands: `pipenv --python 3.7 && pipenv install`.
-4. Install node dependencies with yarn: `yarn install --frozen-lockfile`.
+3. Go to the root directory of the project, and set up the local virtual environment by the following commands: `pipenv --python 3.7 && pipenv install
+3.5. The virtualenv can then be launched with `pipenv shell`
+4. Install node dependencies with yarn: `yarn install --frozen-lockfile`
 5. Within the root directory, create an `.env` file with the following configurations for our flask application:
    ```
    export FLASK_APP='api/app.py'
